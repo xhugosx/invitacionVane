@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*body{
+            
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: 0;
+            height: 100vh;
+        }*/
+        @font-face {
+            font-family: 'numero';
+            src: url("BernadetteSignature.ttf");
+        }
+        @font-face {
+            font-family: 'texto';
+            src: url("CormorantGaramond-BoldItalic.ttf");
+        }
+        @font-face {
+            font-family: 'fecha';
+            src: url("CormorantSC-Bold.ttf");
+        }
+
+        body { 
+            background-repeat: no-repeat; 
+            background-image: url("/1x/fondo_lado-8.png");
+            background-size: cover; 
+            background-attachment: fixed;
+        } 
+
+        @media only screen and (max-width: 900px) { 
+            body { 
+                background-image: url("/SVG/fonod-8.png"); 
+            }   
+        }
+        .texto{
+            color: #765830; 
+            font-size: 22px;
+            font-family: 'texto';
+            margin: 7px;
+        }
+        .fecha{
+            font-size: 20px;
+            font-family: 'fecha';
+            color: #765830; 
+        }
+        .centrar{
+            justify-content: space-between; 
+            display: flex; 
+        }
+        .numero{
+            font-family: 'numero';
+            font-size: 50px;
+            color:#896C47;
+        }
+        .sabado{
+            margin: auto; 
+            padding: 20px 40px 20px 40px;
+            font-size: 25px
+        }
+        .lineas{
+            border-top: 2px solid #B48B58;
+            border-bottom: 2px solid #B48B58;
+        }
+        .nombre{
+            font-family: "fecha";
+            font-size: 20px;
+        }
+        .tituloBorder{
+            font-family: "fecha";
+            color: #896C47;
+            border-top: 3px solid #B48B58;
+            border-bottom: 3px solid #B48B58;
+            width: 50%;
+            font-size: 20px;
+            
+        }
+        .domicilio{
+            font-family: 'texto';
+            font-size: 20px;
+            color: #765830;
+        }
+        .botonMapa{
+            color: white;
+            background-color: #B48B58;
+            padding: 10px 20px 10px 20px;
+            border-radius: 20px;
+            border: 0px;
+        }
+        .botonMapa:active{
+            opacity: 30%;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-family: 'texto';
+            font-size: 30px;
+        }
+        .itinerarioImagen{
+            margin: 10px;
+        }
+        .asistencia{
+            font-family: 'texto';
+            font-size: 18px;
+            color: #765830;
+        }
+        .asistencia2{
+            font-family: 'texto';
+            font-size: 17px;
+            color: #B48B58;
+        }
+        .asistencia3{
+            font-family: 'texto';
+            color: #B45D00;
+        }
+        .nombreInput{
+            border-radius: 20px;
+            border: 0px;
+            background: #B48B58;
+            color: white;
+            padding: 20px;
+            width: 300px;
+        }
+        .mensaje{
+            height: 100px;
+        }
+        .asistenciaDato{
+            color: #896C47;
+            font-family: 'texto';
+        }
+        table{
+            color: #896C47;
+            font-family: 'texto';
+            border-radius: 20px;
+            border: 2px solid #896C47;
+            width: 90%;
+            text-align: center;
+        }
+        td{
+            padding: 10px;
+            
+        }
+
+        @keyframes bounce1 {
+            0% {
+                transform: translateX(200%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+        @keyframes bounce2 {
+            0% {
+                transform: translateX(-150%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+        .animacionRevote{
+            animation: bounce1 1.5s alternate infinite ease-in;
+        }
+        .animacionRevoteregreso{
+            animation: bounce2 1.5s alternate infinite ease-in;
+        }
+	
+
+        .rotate {
+        animation: rotate 4s infinite linear;
+        }
+
+        @keyframes rotate {
+            20%{
+                -webkit-transform: rotate(15deg);
+            }
+
+            40%{
+                -webkit-transform: rotate(-10deg);
+            }
+            60%{
+                -webkit-transform: rotate(5deg);
+            }
+            80%{
+                -webkit-transform: rotate(-3deg);
+            }
+        }
+        
+        @keyframes rebote {
+            20%, 50%, 80%{
+                -webkit-transform: translateY(0px);
+            }
+            30%{
+                -webkit-transform: translateY(-45px);
+            }
+            60%{
+                -webkit-transform: translateY(-25px);
+            }
+            
+        }
+        .rebote{
+            animation: rebote 4s infinite linear;
+        }
+    </style>
+</head>
+<body>
+    <br><br><br>
+    <center style="align-items: center;">
+
+
+        <img style="position: relative;  border-radius: 20px;" src="SVG/vane.jpeg" alt="" width="50%">
+        <img src="SVG/mi_graduacion.svg" alt="" width="85%" style=" position: absolute; left: 10%; right: 0;">
+        
+        <br>
+        <br>
+        <br>
+        <span  class="texto">
+            
+            Acompañanme a celebrar esta etapa de mi vida <br>
+            la cual culmina gracias al amor y apoyo de mi <br>
+            familia y amigos.
+            
+        </span>
+        <br><br>
+        <br><br>
+        <div class="centrar">
+            
+            <div  class="fecha sabado lineas">SABADO</div>
+            <center>
+                <div>
+                    <div class="fecha">
+                        JULIO
+                    </div>
+                    <br>
+                    <div class="numero">
+                        29
+                    </div>
+                    <br>
+                    <div class="fecha">
+                        2023
+                    </div>
+                </div>
+               
+            </center>
+            <div class="fecha sabado lineas">
+                3:00 PM
+            </div>
+           
+        </div>
+        <br><br><br>
+        <span style="color: black;" class="nombre">
+            Vanesa Roxette B. Olmos 
+        </span>
+        <br><br><br><br><br><br>
+        <div class="tituloBorder">
+            CELEBREMOS EN:
+        </div>
+        <br><br>
+        <img src="/SVG/copas.svg" alt="" width="25%" class="rotate">
+        <br>
+        <span class="domicilio">
+            115 C. Mario Rivas Sousa y Valentin Gómez Farias
+        </span>
+        <br><br>
+        <button class="botonMapa" > 
+            <a href="https://maps.app.goo.gl/MgfE3wZ5kyq5GUUL8" target="_blank"> Abrir mapa</a>
+        </button>
+
+        <br><br> <br><br>
+
+        <div class="tituloBorder">
+            ITINERARIO:
+        </div>
+        <br><br>
+        <div class="centrar">
+            <div>
+                <div>
+                    <img src="/SVG/musica.svg" alt="" width="30%" class="itinerarioImagen animacionRevote">
+                </div>
+                <div class="texto">
+                    Comida 4:00 pm
+                </div>
+                <div>
+                    <img src="/SVG/dulces.svg" alt="" width="30%" class="itinerarioImagen animacionRevote">
+                </div>
+            </div>
+
+            <div style="padding: 0px;"><img src="/SVG/linea.svg" alt="" width="35%" ></div>
+
+            <div>
+                <div class="texto" >
+                    Recepción 3:00 pm
+                </div>
+                <div>
+                    <img src="/SVG/copitas.svg" alt="" width="40%" class="itinerarioImagen animacionRevoteregreso">
+                </div>
+                <div class="texto">
+                    Candy Bar
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="tituloBorder">
+            VESTIMENTA:
+        </div>
+        <br><br><br>
+        <center> <img src="/SVG/ropita.svg" alt="" width="40%" class="rebote"> </center>
+        <br>
+        <span class="domicilio">
+            Semi-Formal (Colores claros o pastel)
+        </span>
+        <br><br><br><br>
+        <div class="tituloBorder">
+            ASISTENCIA:
+        </div>
+        <br>
+        <span class="asistencia">
+            Tu asistencia es importante para mi, <br>
+            entendere si no puedes asistir. <br>
+            <br>
+            Pero requiero de tu confirmación. <br>
+            GRACIAS!
+        </span>
+        <br><br>
+        <span class="asistencia2">
+            Favor de confirmar antes de la segunda semana de julio.
+            <br><br>
+            En caso de no confirmar se tomara como inasistencia
+        </span>
+        <br><br><br>
+        <span class="asistencia3">
+            Nombre completo 
+        </span>
+        <br><br>
+        <input type="text" class="nombreInput" name="" id="nombre"/>
+
+        <br><br><br>
+        <span class="asistencia3">
+            ¿Asistiras?
+        </span>
+        <br>
+        <br>
+        <div style="text-align:left;width: 200px;">
+            <input type="radio" name="asistencia" value="true" id="asistencia"> <span class="asistenciaDato"> Sí, asistiré </span><br>
+            <input type="radio" name="asistencia" value="false" id="asistencia"> <span class="asistenciaDato"> Lo siento, no podré asistir </span><br>
+        </div>
+        
+
+        <br><br><br>
+        <span class="asistencia3">
+            ¿Desea escribirle algun mensaje a la graduada?
+        </span><br><br>
+        <textarea type="text" class="nombreInput mensaje" id="mensaje"> </textarea>
+        <br><br><br><br>
+        <button onclick="enviar()" class="botonMapa"  style="background: white;border: 3px solid #B45D00; cursor: pointer;" id="enviarBoton"> 
+            <span style="font-size: 20px; color: #765830;">Enviar</span>
+            
+        </button>
+
+        <br><br><br>
+        <button onclick="verLista()" class="botonMapa"  style="background: white;border: 3px solid #B45D00; cursor: pointer;"> 
+            <span style="font-size: 20px; color: #765830;">Ver mi lista de invitados</span>
+            
+        </button>
+        <br><br><br><br><br><br>
+
+        <div id="tablaInvitados">
+           
+        </div>
+
+        <br><br><br><br><br><br>
+    
+    </center>
+
+    <script>
+        function enviar()
+        {
+            var nombre = document.getElementById("nombre").value;
+            var mensaje = document.getElementById("mensaje").value;
+            var fecha = fechafunction();
+            var hora = horafunction();
+
+            var asistencia = document.getElementsByName('asistencia');
+            for (var radio of asistencia)
+            {
+                if (radio.checked) {
+                    asistencia = radio;
+                    break;
+                }
+            }
+
+            //console.log(!asistencia.checked)
+
+            if(mensaje === "" || mensaje == null || mensaje.length == 0 || /^\s+$/.test(mensaje) || !asistencia.checked)
+            {
+                //alert("entro")
+                alert(validarMensaje(nombre,mensaje));
+            }
+            else 
+            {
+                asistencia = asistencia.value;
+                setMandarDatos(nombre,mensaje,asistencia,fecha,hora);
+            }
+            
+        }
+
+        function setMandarDatos(nombre,mensaje,asistencia,fecha,hora)
+        {
+            servidor("https://fletes-delgado.000webhostapp.com/fletes/vane/add.php?nombre="+nombre+"&mensaje="+mensaje+"&asistencia="+asistencia+"&fecha="+fecha+"&hora="+hora,getMandarDatos)
+        }
+        function getMandarDatos(r)
+        {
+            var respuesta = r.responseText;
+            //console.log(respuesta)
+            if (respuesta == 1)
+            {
+                var campoinput;
+                campoinput = document.getElementById('nombre');
+                campoinput.disabled = true; 
+                campoinput = document.getElementById('mensaje');
+                campoinput.disabled = true;
+                campoinput = document.getElementById('asistencia');
+                campoinput.disabled = true; 
+                campoinput = document.getElementById('enviarBoton');
+                campoinput.disabled = true; 
+                alert("Se ah completado su registro, muchas gracias!");
+            }
+             
+            else alert("HUBO UN ERROR!");
+        }
+        function servidor(link,miFuncion)
+        {
+            if(window.navigator.onLine){
+                var xhttp = new XMLHttpRequest();
+
+                xhttp.onreadystatechange = function(){
+                    if(this.readyState == 4 && this.status == 200){
+
+                        miFuncion(this);
+
+                    }
+                
+                };
+
+                xhttp.open("GET",link,true);
+                xhttp.send();
+            }
+            else{
+                alert('Revisa tu conexión <i style="color:gray" class="fa-solid fa-wifi fa-lg"></i>');
+            }
+        
+        }
+        function fechafunction()
+        {
+            var fecha = new Date(); //Fecha actual
+            var mes = fecha.getMonth()+1; //obteniendo mes
+            var dia = fecha.getDate(); //obteniendo dia
+            var ano = fecha.getFullYear(); //obteniendo año
+            if(dia<10)
+                dia='0'+dia; //agrega cero si el menor de 10
+            if(mes<10)
+                mes='0'+mes //agrega cero si el menor de 10
+            return ano+"-"+mes+"-"+dia;
+        }
+        function horafunction()
+        {
+            var momentoActual = new Date();
+            var hora = momentoActual.getHours();
+            var minuto = momentoActual.getMinutes();
+            var segundo = momentoActual.getSeconds();
+
+            return hora + ":" + minuto + ":" + segundo;
+        }
+        function validarMensaje(nombre,mensaje)
+        {
+            //console.log("entro");
+            if(nombre === "") return "Escribe tu nombre primero!";
+            if(mensaje == null || mensaje.length == 0 || /^\s+$/.test(mensaje)) return "Escribile por lo menos un mensajito pequeño!";
+            if(!asistencia.checked) return "Selecciona si asistrias o no!";
+            
+        }
+
+        function verLista()
+        {
+            let password = prompt ('Se Requiere contraseña');
+            if(password == "1")
+            {
+                setBuscarTabla();
+            }
+            else alert("Esa no es la contraseña, osea que no eres vane :c");
+        }
+
+        function setBuscarTabla()
+        {
+            document.getElementById("tablaInvitados").innerHTML = "";
+            servidor("https://fletes-delgado.000webhostapp.com/fletes/vane/select.php",getBuscarTabla)
+        }
+        function getBuscarTabla(r)
+        {
+            var html = "";
+
+            var respuesta = r.responseText;
+
+            if(respuesta == "") html += '<table><td>AUN NO TIENES INVITADOS</td></table>';
+            else{
+                var arrayJson = respuesta.split('|');
+                
+                var tempJson = [];
+
+                html += '<table>';
+                html += '    <tr>';
+                html += '        <td>';
+                html += '            Nombre:';
+                html += '        </td>';
+                html += '        <td>';
+                html += '            Mensaje';
+                html += '        </td>';
+                html += '        <td>';
+                html += '            Asistira?';
+                html += '        </td>';
+                html += '        <td>';
+                html += '            Registro';
+                html += '        </td>';
+                html += '    </tr>';
+                
+                var asistencia;
+                
+                for(var i=0; i<arrayJson.length-1; i++)
+                {
+                    tempJson = JSON.parse(arrayJson[i]);
+                    asistencia = tempJson.asistencia == "true" ? "Sí" : "No";
+                    html += '    <tr>';
+                    html += '        <td>';
+                    html += tempJson.id+' '+tempJson.nombre;
+                    html += '        </td>';
+                    html += '        <td>';
+                    html += tempJson.mensaje;
+                    html += '        </td>';
+                    html += '        <td>';
+                    html += asistencia;
+                    html += '        </td>';
+                    html += '        <td>';
+                    html += tempJson.fecha+" "+tempJson.hora;
+                    html += '        </td>';
+                    html += '    </tr>';
+
+                }
+                html += '</table>';
+            }
+
+            document.getElementById("tablaInvitados").innerHTML = html;
+
+        }
+    </script>
+</body>
+</html>
